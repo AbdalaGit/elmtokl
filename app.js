@@ -12,7 +12,7 @@ const DEFAULT_PRODUCTS = [
     price: 190,
     weight: 'علبة 8 قطع - 1 كيلو جرام',
     description: 'برجر مجهز من أنقى قطعيات اللحم البقري الصافي بتتبيلة المتوكل السرية المميزة، مثالي للشواء والتحضير السريع.',
-    image: '/src/assets/images/frozen_burger_1783712971539.jpg',
+    image: 'src/assets/images/frozen_burger_1783712971539.jpg',
     isPopular: true
   },
   {
@@ -22,7 +22,7 @@ const DEFAULT_PRODUCTS = [
     price: 240,
     weight: 'علبة 20 قطعة - 1.5 كيلو جرام',
     description: 'علبة التوفير الكبرى متبلة بخلطة بهارات الحارة الشهية، ممتازة لوجبات الأطفال السريعة وسريعة التحضير في المنزل.',
-    image: '/src/assets/images/frozen_burger_1783712971539.jpg',
+    image: 'src/assets/images/frozen_burger_1783712971539.jpg',
     isPopular: false
   },
   {
@@ -32,7 +32,7 @@ const DEFAULT_PRODUCTS = [
     price: 195,
     weight: 'طبق 1 كيلو جرام',
     description: 'كفتة سيخ بلدي فاخرة على أصولها، غنية بالنكهة الشرقية الطبيعية ورائحة الشواء والضأن لتمنحك متعة كفتة الحاتي الحقيقية.',
-    image: '/src/assets/images/frozen_kofta_1783712984069.jpg',
+    image: 'src/assets/images/frozen_kofta_1783712984069.jpg',
     isPopular: true
   },
   {
@@ -42,7 +42,7 @@ const DEFAULT_PRODUCTS = [
     price: 165,
     weight: 'طبق 800 جرام',
     description: 'كرات كفتة شهية متماسكة غنية بالتوابل، جاهزة للوضع مباشرة في الصلصة والتحضير السريع في دقائق معدودة.',
-    image: '/src/assets/images/frozen_kofta_1783712984069.jpg',
+    image: 'src/assets/images/frozen_kofta_1783712984069.jpg',
     isPopular: false
   },
   {
@@ -52,7 +52,7 @@ const DEFAULT_PRODUCTS = [
     price: 215,
     weight: 'طبق 1 كيلو جرام',
     description: 'شرائح كبدة بقري مقطعة بسمك مثالي لتجهيز كبدة بانيه بالردة أو بالردة والثوم، مغسولة ومعبأة بأعلى معايير السلامة.',
-    image: '/src/assets/images/frozen_liver_1783712998793.jpg',
+    image: 'src/assets/images/frozen_liver_1783712998793.jpg',
     isPopular: true
   },
   {
@@ -62,7 +62,7 @@ const DEFAULT_PRODUCTS = [
     price: 180,
     weight: 'طبق 800 جرام',
     description: 'قطع كبدة صغيرة جداً مقطعة بعناية (عصافيري)، ممتازة لعمل أحلى السندوتشات الإسكندراني بالثوم والليمون والفلفل الحامي.',
-    image: '/src/assets/images/frozen_liver_1783712998793.jpg',
+    image: 'src/assets/images/frozen_liver_1783712998793.jpg',
     isPopular: false
   },
   {
@@ -72,7 +72,7 @@ const DEFAULT_PRODUCTS = [
     price: 145,
     weight: 'كيس عائلي كبير 2.5 كيلو جرام',
     description: 'بطاطس بوم فريت نصف مقلية ومقرمشة، جودة المطاعم الفاخرة، مقرمشة من الخارج وهشة من الداخل دون امتصاص زيت.',
-    image: '/src/assets/images/frozen_fries_1783713011657.jpg',
+    image: 'src/assets/images/frozen_fries_1783713011657.jpg',
     isPopular: true
   },
   {
@@ -82,7 +82,7 @@ const DEFAULT_PRODUCTS = [
     price: 80,
     weight: 'كيس 1 كيلو جرام',
     description: 'أصابع بطاطس متبلة ببهارات حارة وتوابل رائعة، جاهزة للقلي الفوري لتعطيك نكهة مقرمشة ممتازة يعشقها الأطفال والكبار.',
-    image: '/src/assets/images/frozen_fries_1783713011657.jpg',
+    image: 'src/assets/images/frozen_fries_1783713011657.jpg',
     isPopular: false
   }
 ];
@@ -473,10 +473,10 @@ function setupEventListeners() {
 // ====================================================
 
 const CATEGORY_DEFAULT_IMAGES = {
-  burger: '/src/assets/images/frozen_burger_1783712971539.jpg',
-  kofta: '/src/assets/images/frozen_kofta_1783712984069.jpg',
-  liver: '/src/assets/images/frozen_liver_1783712998793.jpg',
-  fries: '/src/assets/images/frozen_fries_1783713011657.jpg'
+  burger: 'src/assets/images/frozen_burger_1783712971539.jpg',
+  kofta: 'src/assets/images/frozen_kofta_1783712984069.jpg',
+  liver: 'src/assets/images/frozen_liver_1783712998793.jpg',
+  fries: 'src/assets/images/frozen_fries_1783713011657.jpg'
 };
 
 function trackVisitor() {
