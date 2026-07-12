@@ -1,0 +1,6 @@
+{
+  "name": "مجمدات المتوكل",
+  "description": "متجر المتوكل للمجمدات - أفضل أنواع البرجر، الكفتة، الكبدة، وبطاطس الشركات بجودة عالية وأسعار ممتازة مع توصيل سريع.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
