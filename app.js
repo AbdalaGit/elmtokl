@@ -572,7 +572,7 @@ window.onCategoryChange = function() {
   if (catSelect && imgInput) {
     const selectedCat = catSelect.value;
     // Only set default if there is no image or it is currently a default category image
-    if (!editId || !imgInput.value || imgInput.value.startsWith('/src/assets/images/') || Object.values(CATEGORY_DEFAULT_IMAGES).includes(imgInput.value)) {
+    if (!editId || !imgInput.value || imgInput.value.startsWith('src/assets/images/') || Object.values(CATEGORY_DEFAULT_IMAGES).includes(imgInput.value)) {
       imgInput.value = CATEGORY_DEFAULT_IMAGES[selectedCat] || '';
     }
   }
