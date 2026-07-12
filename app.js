@@ -91,6 +91,18 @@ let PRODUCTS = JSON.parse(localStorage.getItem('almutawakkil_products'));
 if (!PRODUCTS || !Array.isArray(PRODUCTS) || PRODUCTS.length === 0) {
   PRODUCTS = DEFAULT_PRODUCTS;
   localStorage.setItem('almutawakkil_products', JSON.stringify(PRODUCTS));
+} else {
+  // Migrate existing localStorage products to use relative paths if they contain a leading slash
+  let migrated = false;
+  PRODUCTS.forEach(p => {
+    if (p.image && p.image.startsWith('/src/')) {
+      p.image = p.image.substring(1);
+      migrated = true;
+    }
+  });
+  if (migrated) {
+    localStorage.setItem('almutawakkil_products', JSON.stringify(PRODUCTS));
+  }
 }
 
 // Dynamic Store Configuration loaded from localStorage
@@ -473,10 +485,10 @@ function setupEventListeners() {
 // ====================================================
 
 const CATEGORY_DEFAULT_IMAGES = {
-  burger: 'src/assets/images/frozen_burger_1783712971539.jpg',
-  kofta: 'src/assets/images/frozen_kofta_1783712984069.jpg',
-  liver: 'src/assets/images/frozen_liver_1783712998793.jpg',
-  fries: 'src/assets/images/frozen_fries_1783713011657.jpg'
+  burger: '/src/assets/images/frozen_burger_1783712971539.jpg',
+  kofta: '/src/assets/images/frozen_kofta_1783712984069.jpg',
+  liver: '/src/assets/images/frozen_liver_1783712998793.jpg',
+  fries: '/src/assets/images/frozen_fries_1783713011657.jpg'
 };
 
 function trackVisitor() {
@@ -572,7 +584,7 @@ window.onCategoryChange = function() {
   if (catSelect && imgInput) {
     const selectedCat = catSelect.value;
     // Only set default if there is no image or it is currently a default category image
-    if (!editId || !imgInput.value || imgInput.value.startsWith('src/assets/images/') || Object.values(CATEGORY_DEFAULT_IMAGES).includes(imgInput.value)) {
+    if (!editId || !imgInput.value || imgInput.value.startsWith('/src/assets/images/') || Object.values(CATEGORY_DEFAULT_IMAGES).includes(imgInput.value)) {
       imgInput.value = CATEGORY_DEFAULT_IMAGES[selectedCat] || '';
     }
   }
